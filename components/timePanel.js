@@ -1,5 +1,6 @@
 export function timePanel(timeNow) {
     let currentTime = document.createElement('h1')
+    currentTime.id = 'clock'
 
     const hoursNow = timeNow.hours >= 0 && timeNow.hours <= 9 ? '0' + timeNow.hours : timeNow.hours
     const minutesNow = timeNow.minutes >= 0 && timeNow.minutes <= 9 ? '0' + timeNow.minutes : timeNow.minutes
