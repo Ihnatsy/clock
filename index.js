@@ -30,8 +30,10 @@ function updateClock() {
     // НУЖНО ПОГУГЛИТЬ ЧТО ТАКОЕ new Date()
     const now = new Date();
     const hours = now.getHours()
+    const hoursNow = hours >= 0 && hours <=9 ? '0'+ hours : hours
     const minutes = now.getMinutes()
+    const minutesNow = minutes >= 0 && minutes <=9 ? '0'+ minutes : minutes
     const seconds = now.getSeconds()
-    let secondsNow = seconds >= 0 & seconds <=9 ? '0'+ seconds : seconds
-    clock.textContent = hours + ':' + minutes + ':' + secondsNow;
+    const secondsNow = seconds >= 0 && seconds <=9 ? '0'+ seconds : seconds
+    clock.textContent = hoursNow + ':' + minutesNow + ':' + secondsNow;
 }
